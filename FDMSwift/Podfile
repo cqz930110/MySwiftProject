@@ -1,0 +1,40 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '8.0'
+target 'FDMSwift' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for FDMSwift
+
+
+#Swift
+#键盘
+pod 'IQKeyboardManagerSwift', '~> 4.0.8'
+#请求
+pod 'Alamofire', '~> 4.3.0'
+#解析json
+pod 'SwiftyJSON', '~> 3.1.4'
+#下拉刷新
+pod 'NVActivityIndicatorView', '~> 3.5'
+#加载图片
+pod 'Kingfisher', '~> 3.5.0'
+#一个iOS8风格的HUD,效果不错
+pod 'PKHUD', '~> 4.2.0'
+#加密解密,支持MD5,SHA,HMac,AES等
+pod 'CryptoSwift', '~> 0.6.7'
+
+
+#Objective-C
+pod 'QMUIKit', '~> 1.3.0'
+
+
+  target 'FDMSwiftTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  target 'FDMSwiftUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

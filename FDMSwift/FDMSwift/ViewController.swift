@@ -12,6 +12,7 @@ typealias FDMBlock = Void
 typealias FDMBlockBlock = (_ block : FDMBlock) -> Void
 typealias FDMObjectBlock = (_ obj : Any) -> Void
 typealias FDMArrayBlock = (_ arrays : Array<Any>) -> Void
+typealias FDMStringBlock = (_ tempString: String) -> Void
 
 
 class ViewController: UIViewController {
@@ -28,7 +29,6 @@ class ViewController: UIViewController {
 
 
 }
-
 
 class TestClass {
 

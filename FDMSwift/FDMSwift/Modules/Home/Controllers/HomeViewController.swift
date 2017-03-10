@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias FDMCharBlock = (_ ch : Character) ->Void
+
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -22,6 +24,48 @@ class HomeViewController: UIViewController {
         
         self.title = "首页"
         
+        
+        let trimString = "gdhasvbgeuiwqgfuiewhbqqqqqqqqqqqucbnwobncuewhbndx"
+        trimStringMethods(trimString) { (ch) in
+            
+            print("最大的字符串是\(ch)")
+        }
+        
+    }
+    
+    func trimStringMethods(_ trimString : String, success: FDMCharBlock){
+        
+        var bigDictionary : Dictionary<Character,Int> = [:]
+        
+        for ch in trimString.characters {
+            
+            let num = bigDictionary[ch]
+            
+            if num == nil {
+                bigDictionary[ch] = 1
+            } else {
+                bigDictionary[ch] = num! + 1
+            }
+        }
+        
+        var maxCount : Int = 0
+        
+        bigDictionary.forEach { (key: Character, value: Int) in
+            
+            if (value > maxCount) {
+                maxCount = value
+            }
+        }
+        
+        for (ch, num) in bigDictionary {
+            
+            if num == maxCount {
+                
+                print("最大的字符串是\(ch)")
+                success(ch)
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
