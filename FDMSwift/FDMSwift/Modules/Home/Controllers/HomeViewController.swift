@@ -16,14 +16,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         initUI()
-
     }
     
     //MARK: methods
     func initUI() {
         
-        self.title = "首页"
-        
+        self.title = "登录"
         
         let trimString = "gdhasvbgeuiwqgfuiewhbqqqqqqqqqqqucbnwobncuewhbndx"
         trimStringMethods(trimString) { (ch) in
